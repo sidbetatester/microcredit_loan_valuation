@@ -176,13 +176,20 @@ loans = [
 
 # @TODO: Create an empty list called `inexpensive_loans`
 # YOUR CODE HERE!
+inexpensive_loans = []
 
 # @TODO: Loop through all the loans and append any that cost $500 or less to the `inexpensive_loans` list
 # YOUR CODE HERE!
-
+counter=0
+for loan in loans:
+    if loan["loan_price"] <= 500:
+        inexpensive_loans.append(loan)
+        counter = counter + 1
+        print(f"Inexpensive loan {counter}: $ {loan}")
 # @TODO: Print the `inexpensive_loans` list
+        
 # YOUR CODE HERE!
-
+print(f"List of inexpensive loans: $ {inexpensive_loans}")
 
 """Part 5: Save the results.
 
